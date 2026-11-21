@@ -1,0 +1,113 @@
+---
+title: "Aplicación de las Reglas de Derivación para el Análisis de la Producción e Ingresos en la Empresa Creaciones Juveniles"
+author: "GRUPO 3"
+format: html
+editor: visual
+fecha: Semana del 2 al 6 de noviembre
+bibliography: "bibliografia CR.bib"
+notice: |
+  @*
+---
+
+# Ejercicio 1: Producción de uniformes escolares
+
+En Creaciones Juveniles, la producción de uniformes escolares durante una campaña está representada por:
+
+$$P(x)=4x^3+10x^2+150$$donde:
+
+- P(x): número de uniformes producidos.
+
+- x: días transcurridos.
+
+Determine la razón de cambio de la producción respecto al tiempo.
+
+## Procedimiento
+
+Aplicamos la **regla de la suma**:
+
+$$ P'(x)=\frac{d}{dx}(4x^3)+\frac{d}{dx}(10x^2)+\frac{d}{dx}(150)$$
+
+Aplicando la regla de la potencia:
+
+$$P'(x)=12x^2+20x+0$$
+
+Por tanto:
+
+$$P'(x)=12x^2+20x $$
+
+#  Gráfica
+
+```{r}
+x <- seq(0, 10, 0.1)
+
+P <- 4*x^3 + 10*x^2 + 150
+
+plot(x, P,
+     type = "l",
+     col = "blue",
+     lwd = 2,
+     main = "Producción de Uniformes Escolares",
+     xlab = "Días",
+     ylab = "Uniformes producidos")
+
+grid()
+```
+
+**Análisis:**
+
+La función muestra el comportamiento de la producción de uniformes escolares en Creaciones Juveniles a lo largo del tiempo. Al obtener la derivada $$P′(x)=12x2+20x$$, se observa que la tasa de producción aumenta conforme transcurren los días. Esto significa que la empresa no solo produce más uniformes, sino que cada día incrementa su capacidad de producción, reflejando un crecimiento progresivo durante la campaña escolar.
+
+# Ejercicio 2: Ingresos por Venta de Camisetas Personalizadas
+
+Los ingresos por las ventas de camisetas personalizadas en Creaciones Juveniles están representados por:
+
+$$ I(x)=x(x+100)$$
+
+donde:
+
+- I(x): ingresos en dólares.
+
+- x: cantidad de camisetas vendidas.
+
+**Determine la razón de cambio de los ingresos.**
+
+## Procedimiento
+
+Desarrollamos la expresión:
+
+$$I(x)=x^2+100x$$
+
+Aplicamos la derivada:
+
+$$I'(x)=\frac{d}{dx}(x^2)+\frac{d}{dx}(100x)$$
+
+$$I'(x)=2x+100$$
+
+Por tanto:
+
+$$I'(x)=2x+100$$
+
+#  Gráfica
+
+```{r}
+x <- seq(0, 100, 1)
+
+I <- x^2 + 100*x
+
+plot(x, I,
+     type = "l",
+     col = "darkgreen",
+     lwd = 2,
+     main = "Ingresos por Venta de Camisetas",
+     xlab = "Cantidad de camisetas vendidas",
+     ylab = "Ingresos ($)")
+
+grid()
+```
+
+# Análisis 
+
+\
+La función representa los ingresos obtenidos por la venta de camisetas personalizadas en Creaciones Juveniles. La derivada $$I'(x)=2x+100$$
+
+o varían los ingresos cuando aumenta la cantidad de camisetas vendidas. Como la razón de cambio es positiva, los ingresos crecen continuamente; además, mientras más camisetas se venden, mayor es el incremento de los ingresos de la empresa.[@creacionesjuveniles]
